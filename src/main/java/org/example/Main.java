@@ -1,17 +1,30 @@
 package org.example;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Scanner scanner = new Scanner(System.in);
+        boolean exit = false;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        while (!exit) {
+            System.out.println("Выберите программу:");
+            System.out.println("1 - Восточный календарь");
+            System.out.println("2 - Проверка таблицы умножения");
+            System.out.println("3 - Книги и авторы");
+            System.out.println("0 - Выход");
+
+            int choice = scanner.nextInt();
+            switch (choice) {
+                case 1 -> Work1.run();
+                case 2 -> Work2.run();
+                case 3 -> Work3.run();
+                case 0 -> exit = true;
+                default -> System.out.println("Неверный выбор. Попробуйте снова.");
+            }
         }
+
+        System.out.println("Выход из программы. До свидания!");
+        scanner.close();
     }
 }
