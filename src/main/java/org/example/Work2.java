@@ -9,12 +9,13 @@ package org.example;
 3 или 4 — "Надо бы еще поучить".
 Меньше 2 — "Срочно нужно учить таблицу умножения".*/
 
+import java.nio.charset.StandardCharsets;
 import java.util.Random;
 import java.util.Scanner;
 
 public class Work2 {
     public static void run() {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in, StandardCharsets.UTF_8);
         Random random = new Random();
         int correctAnswers = 0;
 

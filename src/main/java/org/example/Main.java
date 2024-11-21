@@ -1,10 +1,14 @@
 package org.example;
 
+import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        // Устанавливаем кодировку для консоли
+        System.setOut(new java.io.PrintStream(System.out, true, StandardCharsets.UTF_8));
+
+        Scanner scanner = new Scanner(System.in, StandardCharsets.UTF_8);
         boolean exit = false;
 
         while (!exit) {

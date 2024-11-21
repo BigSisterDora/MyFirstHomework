@@ -5,6 +5,7 @@ package org.example;
 Создайте конструкторы, методы get/set (где необходимо сделайте проверку), а также метод toString().
 Создайте массив из 5 книг.*/
 
+import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 
 class Author {
@@ -52,6 +53,7 @@ class Book {
 
 public class Work3 {
     public static void run() {
+        System.setOut(new java.io.PrintStream(System.out, true, StandardCharsets.UTF_8));
         Author author1 = new Author("Джон Толкин");
         Author author2 = new Author("Джоан Роулинг");
         Author author3 = new Author("Лев Толстой");
@@ -69,3 +71,4 @@ public class Work3 {
         }
     }
 }
+
